@@ -1,0 +1,130 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    outline: none;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+ol, ul {list-style: none }
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  mix-blend-mode: difference;
+  color: white;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  mix-blend-mode: difference;
+  padding:10px;
+}
+
+a {
+	color:#fff;
+	text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  max-height: 100px; }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding:10px }
+
+.wrapper li { display: inline-block }
+
+.item-div { margin: 0 10px }
+
+section.wrapper-black, section.wrapper-white, main { height: 2000px }
+
+section.wrapper-black { background-color: #191919 }
+section.wrapper-white, main { background-color: #fffcfc }
+
+.wrapper-todo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 400px;
+  margin: 0 auto }
+
+.list_menu {
+display: flex;
+    flex-direction: row-reverse;
+  height: 100px;
+  align-items: center }
+
+.parent_menu {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-60deg) rotateY(360deg) translateZ(30px);
+  display: block }
+
+.deg_ul_1 {
+  transform: rotateX(60deg) translateZ(-28px);
+  position: relative;
+  top: 51px }
+
+.deg_ul_2 {
+  transform: rotateY(0deg) rotateX(180deg) translateZ(58px) }
+
+.deg_ul_3 {
+  transform: rotateX(-60deg) translateZ(-30px);
+  position: relative;
+  top: -49px }
