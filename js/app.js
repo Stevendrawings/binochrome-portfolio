@@ -1,7 +1,7 @@
 const wrapper = document.querySelector('.wrapper');
-const menu1 = ["index", "apropos", "service", "team", "contact"];
-const menu2 = ["index", "blog", "service", "team", "contact"];
-const menu3 = ["index", "facebook", "instagram", "pinterest", "Linkedin", "contact"];
+const menu1 = ["accueil", "illustration", "photographie", "graphisme", "contact"].reverse();
+const menu2 = ["accueil", "blog", "service", "team", "contact"].reverse();
+const menu3 = ["accueil", "facebook", "instagram", "pinterest", "linkedin", "behance"].reverse();
 
 let counter_deg = 60;
 
@@ -12,7 +12,6 @@ const tab_menus = [menu1, menu2, menu3];
 let copie_tab = [...tab_menus]
 
 copie_tab.forEach((val) => {
-
     let ul = document.createElement('ul');
     ul.classList.add("list_menu");
 
@@ -24,6 +23,7 @@ copie_tab.forEach((val) => {
         ul.appendChild(li) 
         li.classList.add('item-div');
         const monLien = document.createElement('a');
+        monLien.href = "file:///C:/Users/steve/Desktop/binochrome/index.html"
         li.appendChild(monLien)
         monLien.textContent = val[i]; 
     }
@@ -35,6 +35,10 @@ const deg_ul_2 = document.querySelector('.list_menu:nth-child(2)')
 .classList.add("deg_ul_2")
 const deg_ul_3 = document.querySelector('.list_menu:nth-child(3)')
 .classList.add("deg_ul_3")
+
+
+// lorsque le menu est active il faudra mettre un effet de box shadow 
+// box-shadow: inset 20px 0px 100px 25px black;
 
 
 // let sectionScoller = document.querySelectorAll("section")
@@ -67,6 +71,8 @@ const deg_ul_3 = document.querySelector('.list_menu:nth-child(3)')
 
 // const observer = new IntersectionObserver(callback, options);
 
-// // Ciblez et observez un élément du DOM
+// Ciblez et observez un élément du DOM
 // observer.observe(document.querySelector("section"));
+
+
 
