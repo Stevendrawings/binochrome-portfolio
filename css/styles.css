@@ -28,6 +28,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+* {
+  box-sizing: border-box;
+}
+
 body {
 	line-height: 1;
     outline: none;
@@ -36,6 +41,7 @@ body {
     font-weight: weight;
     font-style: normal;
     font-variation-settings: "wdth" 100;
+    scroll-behavior: smooth;
 }
 ol, ul {list-style: none }
 blockquote, q {
@@ -66,6 +72,9 @@ h1 {
   mix-blend-mode: difference;
   padding: 10px;
   z-index: 1;
+  width: 100%;
+  max-width: 190px;
+  text-align: center;
 }
 
 a {
@@ -87,6 +96,8 @@ a {
 .wrapper {
   display: flex;
   flex-direction: column;
+  z-index: 2;
+  width: 100%;
   padding:10px }
 
 .wrapper li { display: inline-block }
@@ -96,7 +107,7 @@ a {
 section.wrapper-black, section.wrapper-white, main { height: 2000px }
 
 section.wrapper-black { background-color: #191919 }
-section.wrapper-white, main { background-color: #fffcfc }
+section.wrapper-white, main { background-color: #f8f8f5 }
 
 .wrapper-todo {
   width: 100%;
@@ -107,17 +118,17 @@ section.wrapper-white, main { background-color: #fffcfc }
   margin: 0 auto }
 
 .list_menu {
-display: flex;
-    flex-direction: row-reverse;
+  opacity: .12;
+  display: flex;
+  flex-direction: row-reverse;
   height: 100px;
   align-items: center }
 
-.parent_menu {
+.parent_pivot_menu {
   width: 100%;
   height: 100%;
   position: absolute;
   transform-style: preserve-3d;
-  transform: rotateX(60deg) rotateY(0deg) translateY(-110px) translateZ(30px);
   display: block;
   top: 0;
   left: 0;
@@ -137,6 +148,9 @@ display: flex;
   position: relative;
   top: -49px }
 
-.active_menu {
-  box-shadow: inset 20px 0px 100px 25px black;
+.active_menu { opacity: 1 }
+
+footer {
+  background-color: #232323;
+  height: 1000px;
 }

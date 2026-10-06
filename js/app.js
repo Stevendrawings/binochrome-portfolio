@@ -1,12 +1,12 @@
 const wrapper = document.querySelector('.wrapper');
 const menu1 = ["accueil", "illustration", "photographie", "graphisme", "contact"].reverse();
-const menu2 = ["accueil", "blog", "service", "team", "contact"].reverse();
-const menu3 = ["accueil", "facebook", "instagram", "pinterest", "linkedin", "behance"].reverse();
+const menu2 = ["accueil", "facebook", "instagram", "pinterest", "linkedin", "behance"].reverse();
+const menu3 = ["accueil", "blog", "service", "team", "contact"].reverse();
 
-let counter_deg = 60;
+let count_degMax = 300;
 
 const parent_menu = document.createElement("div")
-parent_menu.classList.add("parent_menu")
+parent_menu.classList.add("parent_pivot_menu")
 
 const tab_menus = [menu1, menu2, menu3];
 let copie_tab = [...tab_menus]
@@ -17,7 +17,6 @@ copie_tab.forEach((val) => {
 
     wrapper.appendChild(parent_menu)
     parent_menu.appendChild(ul)
-
     for(let i = 0; i < val.length; i = i + 1){
         let li = document.createElement('li');
         ul.appendChild(li) 
@@ -36,17 +35,53 @@ const deg_ul_2 = document.querySelector('.list_menu:nth-child(2)')
 const deg_ul_3 = document.querySelector('.list_menu:nth-child(3)')
 .classList.add("deg_ul_3")
 
-
-// lorsque le menu est active il faudra mettre un effet de box shadow 
+// lorsque le menu est active il faudra mettre un effet
 // box-shadow: inset 20px 0px 100px 25px black;
 
+const sectionScroller = document.querySelectorAll(".spies")
+const ul_spies = document.querySelector('.list_menu')
+parent_menu.style.transform = "rotateX(" + 300 + "deg)" 
++ "rotateY(0deg) translateX(-10px) translateY(-110px) translateZ(30px)"
 
-// let sectionScoller = document.querySelectorAll("section")
+const activate = function(elem){
+    const idBox = elem.getAttribute('id')
+    if(ul_spies === null){
+        return null;
+    }
+
+    // parent_menu.style.transform = "rotateX(" + (300) + "deg)" 
+    // + "rotateY(0deg) translateX(-10px) translateY(-110px) translateZ(30px)"
+    ul_spies.classList.add('active_menu')
+
+}
+
+const callback = function(entries, obeserver){
+    entries.forEach(function (entry){
+        if(entry.intersectionRatio > 0){
+            //console.log(entry)
+            activate(entry.target)
+        }
+    })
+}
+
+if(sectionScroller.length > 0 ){
+    const observer = new IntersectionObserver(callback, {})
+    sectionScroller.forEach(function(scrollSpies) {
+        observer.observe(scrollSpies)
+    })
+}
+
+let count = 120;
+ if((count + count_degMax) >= 300){
+    count = 60;
+    console.log("la valeur repart à " + count)
+ } else {
+    console.log("la valeur est moins grande")
+ }
 
 // const tabs = sectionScoller;
-
 // const observer = new IntersectionObserver((entries) => {
-//     entries.forEach((entry)=>{
+//     entries.forEach((entry) => {
 //         if(entry.isIntersecting){
 //         console.log(entry.target)
 //         }
