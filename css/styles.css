@@ -95,7 +95,6 @@ a {
 
 .wrapper {
   display: flex;
-  flex-direction: column;
   z-index: 2;
   width: 100%;
   border-bottom: 1px solid red;
@@ -119,11 +118,12 @@ section.wrapper-white, main { background-color: #f8f8f5 }
   margin: 0 auto }
 
 .list_menu {
-  /* opacity: .12; */
+  opacity: .12;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   height: 100px;
-  align-items: center }
+  align-items: center;
+  justify-content: flex-end; }
 
 .parent_pivot_menu {
   -webkit-transition: all 300ms ease;
@@ -143,7 +143,7 @@ section.wrapper-white, main { background-color: #f8f8f5 }
 .deg_ul_1 {
   transform: rotateX(0deg) translateZ(-28px);
   position: relative;
-  top: 51px; }
+  top: 51px }
 
 .deg_ul_2 {
   transform: rotateY(0deg) rotateX(120deg) translateY(-25px) translateZ(100px); }
