@@ -97,7 +97,6 @@ a {
   display: flex;
   z-index: 2;
   width: 100%;
-  border-bottom: 1px solid red;
   padding:10px }
 
 .wrapper li { display: inline-block }
