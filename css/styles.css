@@ -146,7 +146,7 @@ section.wrapper-white, main { background-color: #f8f8f5 }
   top: 51px }
 
 .deg_ul_2 {
-  transform: rotateY(0deg) rotateX(120deg) translateY(-25px) translateZ(100px); }
+  transform: rotateX(120deg) rotateY(0deg) translateY(-25px) translateZ(100px); }
 
 .deg_ul_3 {
   transform: rotateX(240deg) translateY(100px) translateZ(-30px);
