@@ -124,6 +124,7 @@ section.wrapper-white, main { background-color: #f8f8f5 }
   display: flex;
   flex-direction: row;
   height: 100px;
+  margin-right: 1px;
   align-items: center;
   justify-content: flex-end; }
 
@@ -148,10 +149,10 @@ section.wrapper-white, main { background-color: #f8f8f5 }
   top: 51px }
 
 .deg_ul_2 {
-  transform: rotateX(120deg) rotateY(0deg) translateY(-25px) translateZ(100px); }
+  transform: rotateX(240deg) rotateY(0deg) translateY(75px) translateZ(15px) }
 
 .deg_ul_3 {
-  transform: rotateX(240deg) translateY(100px) translateZ(-30px);
+  transform: rotateX(120deg) translateY(0px) translateZ(144px);
   position: relative;
   top: -49px; }
 
@@ -165,14 +166,4 @@ footer {
 .scroller {
   overflow: auto;
   height: 100%;
-}
-
-hr {
-  position: fixed;
-  height: -40%;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 1;
 }
